@@ -1,0 +1,50 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+em{
+    
+    font-size: 150%;
+}
+
+
+strong{
+    font-size: 110%;
+}
+
+
+section{
+     width: 700px;
+}
+
+#banner{
+    right: 40%;
+    background: #c7e0f4;
+    border-color: #007864;
+}
+
+#banner #logo{
+    width:100px;
+    right:15px;
+    top: 9px;
+    background: url(../images/usca.png) no-repeat;
+}
+
+#banner a:hover{
+    background-color: #479683;
+}
+
+#banner .fork{
+    background-color: #f1f0f3;
+}
+
+#banner .button{
+    border: 1px solid #fbe7d2;
+}
+
+
+header{
+
+    background-color: #262626;
+}
