@@ -15,13 +15,14 @@ layout: default
 
 ### Other reference books 
 **[Windows Internals 7th edition (Part 1) by Pavel Yosifovich, Alex Ionescu, Mark Russinovich and David Solomon](https://docs.microsoft.com/en-us/sysinternals/learn/windows-internals)**
+
 **[Troubleshooting with the Windows Sysinternals Tools](https://docs.microsoft.com/en-us/sysinternals/learn/troubleshooting-book)**
 
 
 ### Operating System snapshot
 
 ![windows component](./ntarch.png)
-![Android modular Architecture](./modular_stystem_components_arch.png)
+![Android modular Architecture](./modular_system_components_arch.png)
 
 
 ### Useful Links
