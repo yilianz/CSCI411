@@ -27,18 +27,19 @@ public class CreateProcess {
         System.out.println("Start "+ command);
 
         //Open the process
-        ProcessBuilder pb = new ProcessBuilder(command);
+        ProcessBuilder pb = new ProcessBuilder(command);  //step 1
 
-        //get process environment 
+        /*get process environment 
         Map<String, String> enviroP = pb.environment();
         enviroP.forEach((key,value)-> System.out.println(key+" "+value));
-
-		Process proc = pb.start();	
+        */
+		Process proc = pb.start();	// step 2
 
         //If process have input and output --- handle it. 
 
         //Implement start up process
 
+        //create 10 notepad with this program
 
         console.close();
 
