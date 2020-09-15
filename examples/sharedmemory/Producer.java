@@ -19,7 +19,6 @@ public class Producer implements Runnable
       while (true) {
         // System.out.println("Producer napping");
 	 	
-    
          // produce an item & enter it into the buffer
          message = JOptionPane.showInputDialog("Please produce a product.");     
          System.out.println("Producer produced " + message);
