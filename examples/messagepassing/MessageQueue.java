@@ -10,6 +10,7 @@ public class MessageQueue implements Channel
 {
 	private static final int   QUEUE_SIZE = 20;
    private Vector queue;
+   private int flag =0; 
 
    public MessageQueue() {
       queue = new Vector();
@@ -19,7 +20,7 @@ public class MessageQueue implements Channel
     * This implements a non-blocking send
     */
    public void send(Object item) {
-   	// while (queue.size()>= QUEUE_SIZE);  // bounded capacity
+   	//while (queue.size()>= QUEUE_SIZE);  // bounded capacity
       queue.addElement(item);
    }
 

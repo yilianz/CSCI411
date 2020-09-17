@@ -21,7 +21,7 @@ class Consumer implements Runnable
          // consume an item from the buffer
          System.out.println("Consumer wants to consume.");
        	 message = (Date)mbox.receive();
-	 if (message != null)
+	     if (message != null)
          	System.out.println("Consumer consumed " + message);
       }
    }
