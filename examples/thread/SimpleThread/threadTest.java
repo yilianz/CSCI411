@@ -29,27 +29,27 @@ public class threadTest{
 			}
 		});
 
+		System.out.println(mythread4.getState());
 		// Run the thread
 		mythread1.start();
-
 		mythread2.start();
 		mythread3.start();
 		mythread4.start();
 
 		// main thread continues
 		try {
-			int sleeptime = (int) (15 * Math.random());
+			int sleeptime = (int) (3 * Math.random());
 			Thread.sleep(2000 * sleeptime);
+		
 
-			// use depreciate method
-			// mythread3.stop();
+			// interrupt method
 
 			// use deferred cancellation
-
+	
 		} catch (InterruptedException e) {
 		}
 
-
+	
 	    System.out.println(Thread.currentThread());
 
 

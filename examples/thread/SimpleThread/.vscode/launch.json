@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - threadApp",
+            "request": "launch",
+            "mainClass": "threadApp",
+            "projectName": "SimpleThread_6aa7e480"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - threadTest",
             "request": "launch",
             "mainClass": "threadTest",
