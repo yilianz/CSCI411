@@ -28,11 +28,12 @@ public class simpleRunnable implements Runnable{
 					Thread.sleep(2000 * sleeptime);
 				} catch (InterruptedException e) {
 					System.out.printf("Thread %s is interrupted \n",message);
+					break;
 				}
 
 				// catch interrupt
-				//if (Thread.currentThread().isInterrupted())
-				  //    break;
+				if (Thread.currentThread().isInterrupted())
+				  	   break;
 
 
 				// write to a file
