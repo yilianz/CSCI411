@@ -3,7 +3,7 @@ import java.util.concurrent.*;
 public class Priority
 {
 	private static int MAXIMUM_THREAD = 10;
-	private static int num_priority = 6;
+	private static int num_priority = 6;  // change the priority for I/O thread
 		public static void main(String[] args) {
 		
 		
@@ -13,8 +13,9 @@ public class Priority
 		System.out.println("Start multithreading");
 		
 	
-		// just for kicks, use a thread pool
-		pool.execute(new Task(0));
+		// just for kicks, use a thread pool  0 - 9  + min priority 1  -- No IO
+		pool.execute(new Task(5));  // java priority is 10 ----- windows-Dynamic 6
+               // pool.execute(new Task(0));   // java priority is 2 
 
 
 		//or get a runnable task directly 
@@ -32,7 +33,7 @@ public class Priority
 			System.out.println(" taskIO is done");
 		};
 	
-		//pool.execute(taskwithIO);
+		pool.execute(taskwithIO);   // this is the thread with IO
 
 		// sleep for 300 seconds
 		try { Thread.sleep(300000); } catch (InterruptedException ie) { }
