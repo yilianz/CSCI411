@@ -3,8 +3,8 @@ import java.util.concurrent.*;
 public class Sync
 {
 	private static int MAXIMUM_THREAD = 10;
-	private static int num_priority1 = 1; 
-	private static int num_priority2 = 10; 
+	private static int num_priority1 = 6; 
+	private static int num_priority2 = 6; 
 	private static int count = 0;
 	
 		public static void main(String[] args) {
@@ -21,7 +21,7 @@ public class Sync
 			Thread.currentThread().setPriority(num_priority1);
                         for(int i = 0; i< 100000; i++){
                             count++;
-                            System.out.println("count in task 1 is "+count);
+                            //System.out.println("count in task 1 is "+count);
 			    if (Thread.currentThread().isInterrupted()) break;
 			}
 		};

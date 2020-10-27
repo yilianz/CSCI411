@@ -1,19 +1,22 @@
 /**
- * Worker.java
+ * WorkerLock.java
  * 
- * This thread is used to demonstrate the operation of a semaphore.
+ * This thread is used to demonstrate the operation of a lock.
  * 
  */
+import java.util.concurrent.*;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
-public class Worker implements Runnable {
+public class WorkerLock implements Runnable {
 
-	private Semaphore sem;
+	private Lock lockX;
 	private ClipboardText board;
 	private int name;
 
-	public Worker(ClipboardText board, Semaphore sem, int name) {
+	public WorkerLock(ClipboardText board, Lock loc, int name) {
 		this.name = name;
-		this.sem = sem;
+		this.lockX = loc;
 		this.board = board;
 	}
 
@@ -28,17 +31,16 @@ public class Worker implements Runnable {
 			//nap for a while
 			SleepUtilities.nap();
 			
-		   sem.acquire();  //entry section
+		   lockX.lock();  //entry section
 			
 			//critical section
 			System.out.println("WORKER "+ name + " requests clipboard");
 			board.setText("WORKER "+ name+ " is using clipboard");
-//*** problem here 
-			System.out.println("WORKER"+ name+"get"+board.getText());
+			System.out.println(board.getText());
 			System.out.println("WORKER "+ name + " exits clipboard");
 			
 			
-		    sem.release();   //exit section
+		    lockX.unlock();   //exit section
 		
 		}
 	}

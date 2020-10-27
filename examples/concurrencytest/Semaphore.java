@@ -12,7 +12,7 @@ public class Semaphore
       this.value = value;
    }
 
-   public synchronized void acquire() {
+   public  synchronized void acquire() {
    	  // semaphore requires no busy waiting
       while (value <= 0) {
          try {
@@ -22,17 +22,18 @@ public class Semaphore
          }
          catch (InterruptedException e) { }
       }
-	  // semaphore requires busy waiting
-	  //while (value <= 0);
+	
+	  // semaphore requires busy waiting - spinning lock
+	 // while (value <= 0);
 
       value--;
    }
 
-   public synchronized void release() {
+   public synchronized void  release() {
       ++value;
 	
 	  //semaphore requires no busy waiting	
-        notify();
+       notify();
       
       //semaphore requires busy waiting
       
