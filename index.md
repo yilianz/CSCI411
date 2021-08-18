@@ -18,7 +18,7 @@ layout: default
 
 **[Troubleshooting with the Windows Sysinternals Tools](https://docs.microsoft.com/en-us/sysinternals/learn/troubleshooting-book)**
 
-
+**[Course Syllabus](https://yilianz.github.io/syllabus/CSCIA411syllabus.html)**
 ### Operating System snapshot
 
 ![windows component](./ntarch.png)
