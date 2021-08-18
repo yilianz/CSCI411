@@ -31,7 +31,7 @@ public class simpleRunnable implements Runnable{
 				}
 
 				// catch interrupt
-				//if (Thread.currentThread().isInterrupted())
+				// if (Thread.currentThread().isInterrupted())
 				//	break;
 
 
