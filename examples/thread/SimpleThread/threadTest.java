@@ -16,10 +16,12 @@ public class threadTest{
 		// Create a new thread
 		simpleThreadClass mythread1;
 		simpleThreadClass mythread2;
-
+		
+	
 		mythread1 = new simpleThreadClass(0);
 		mythread2 = new simpleThreadClass(1);
 		final Thread mythread3 = new Thread(new simpleRunnable("R1"));
+		
 
 	
 		final Thread mythread4 = new Thread(new Runnable() {
@@ -29,6 +31,7 @@ public class threadTest{
 			}
 		});
 
+<<<<<<< HEAD
 		double[] partialsum = {0,0,0,0};
 		Runnable task1 = () ->{
 			a[0]++;
@@ -38,27 +41,41 @@ public class threadTest{
 		Thread worker = new Thread(task1);
 		worker.start();
 
+=======
+		Runnable task = () -> {
+			System.out.println("this is a runnable task");
+		};
+
+		Thread worker = new Thread(task);
+
+		System.out.println(mythread4.getState());
+>>>>>>> 3680ff5e0f5cc858203952ec300ee6a24dc5396f
 		// Run the thread
 		mythread1.start();
-
 		mythread2.start();
 		mythread3.start();
 		mythread4.start();
+	
 
 		// main thread continues
 		try {
-			int sleeptime = (int) (15 * Math.random());
+			int sleeptime = (int) (2 * Math.random());
 			Thread.sleep(2000 * sleeptime);
+			System.out.println("My thread 4 is "+mythread4.getState());
 
-			// use depreciate method
-			// mythread3.stop();
-
+			// interrupt method
+			//mythread3.interrupt();
+			//System.out.println(mythread3.getState());
 			// use deferred cancellation
 
+			// main thread wait for other threads 
+			mythread1.join();
+
+	
 		} catch (InterruptedException e) {
 		}
 
-
+	
 	    System.out.println(Thread.currentThread());
 
 
