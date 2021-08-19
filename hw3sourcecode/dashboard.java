@@ -15,7 +15,7 @@ public class dashboard extends JPanel {
     public dashboard() {
         setLayout(new BoxLayout(this, BoxLayout.LINE_AXIS));
 
-        String initialText = "";
+        String initialText = "Office is Empty";
 
         office = new JTextArea(10, 20);
         office.setText(initialText);
@@ -114,7 +114,7 @@ public class dashboard extends JPanel {
         return current;
     }
 
-    public   void leaveRoom(String name) {
+    public void leaveRoom(String name) {
         String current = office.getText();
         // remove the student from office
         String m = "Student " + name + " enter office\n";
@@ -124,7 +124,7 @@ public class dashboard extends JPanel {
     public synchronized void waitHallway(String name) {
         String current = hallway.getText();
         current = current.substring(0, current.length() - 7) + "<br>Student " + name + " is waiting" + "</html>";
-        //System.out.println(name+" come "+ current);
+        System.out.println(name+" come "+ current);
         hallway.setText(current);
     }
 
@@ -134,6 +134,17 @@ public class dashboard extends JPanel {
         // remove the student from waiting room
         String m = "<br>Student " + name + " is waiting";
         hallway.setText(removeLine(m,current));
+        int pos = current.indexOf(m); 
+        if (pos != -1) {
+          //  int pos1 = current.indexOf("waiting", pos);
+          //  current = current.substring(0, pos - 12) + current.substring(pos1 + 7);
+            current = current.substring(0, pos)+current.substring(pos+m.length());
+            System.out.println(name+" leave "+ current);
+            hallway.setText(current);
+        } else {
+            System.out.println(name + " is not in Hallway");
+        }
+
     }
 
     /**

@@ -11,7 +11,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class students implements Runnable {
 
 	private dashboard board;
-	private Lock lockX;   // You might remove it if you use other synchroization tools. 
+	private Lock lockX;   // You might remove it if you don't need the lock. 
 	private String name;
 
 	public students(dashboard board, Lock loc, String name) {
@@ -26,14 +26,11 @@ public class students implements Runnable {
 		while (true) {
 			
 			//programming for a while
-			SleepUtilities.nap(10);		
+					
 			//seek help from TA
 			
-            //post the status of the students whenever their status change.
-			board.postMessage(name+" need help"); 
 
-			// if the waiting room has space,  wait in hallway. 
-			// Otherwise do more programming. 
+			board.postMessage(name+" need help");
 			board.waitHallway(name);
 
 			
@@ -48,10 +45,10 @@ public class students implements Runnable {
 			
 			SleepUtilities.nap();
 
-			//leave the office and go back
+			
 			board.leaveRoom(name);
 			
-			
+			//leave the office and go back
 		
 		}
 	}
