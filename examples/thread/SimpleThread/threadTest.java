@@ -10,7 +10,8 @@ import java.io.*;
 import java.util.*;
 
 public class threadTest{
-	private static int k = 4;
+    private static int k = 4;
+    private static double[] a = {0,0,0,0};
     public static void main(final String[] args) {
 
 		// Create a new thread
@@ -31,8 +32,8 @@ public class threadTest{
 			}
 		});
 
-<<<<<<< HEAD
-		double[] partialsum = {0,0,0,0};
+
+		
 		Runnable task1 = () ->{
 			a[0]++;
 			System.out.println(a[0]);
@@ -41,15 +42,15 @@ public class threadTest{
 		Thread worker = new Thread(task1);
 		worker.start();
 
-=======
+
 		Runnable task = () -> {
 			System.out.println("this is a runnable task");
 		};
 
-		Thread worker = new Thread(task);
+		// Get another worker
 
 		System.out.println(mythread4.getState());
->>>>>>> 3680ff5e0f5cc858203952ec300ee6a24dc5396f
+
 		// Run the thread
 		mythread1.start();
 		mythread2.start();

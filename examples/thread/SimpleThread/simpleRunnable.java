@@ -32,13 +32,13 @@ public class simpleRunnable implements Runnable{
 				}
 
 				// catch interrupt
-<<<<<<< HEAD
+
 				// if (Thread.currentThread().isInterrupted())
 				//	break;
-=======
+
 				if (Thread.currentThread().isInterrupted())
 				  	   break;
->>>>>>> 3680ff5e0f5cc858203952ec300ee6a24dc5396f
+
 
 
 				// write to a file

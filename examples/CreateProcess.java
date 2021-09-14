@@ -5,16 +5,16 @@
 import java.io.*;
 import java.util.*; 
 
-// Try command such as  mspaint, SnippingTool, explorer   
-// Try command with path such as :  C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe
+// Try command such as  notepad, mspaint, SnippingTool, explorer   
+// Try command with path such as :  C:\Program Files (x86)\Adobe\Acrobat DC\Acrobat\Acrobat.exe
 
 public class CreateProcess {
 
     public static void main(String[] args) throws IOException {
-    	/* show system environment
+    	// show system environment
 		Map<String, String>  enviro = System.getenv();
         for (String key:enviro.keySet()) System.out.println(key+ "  :  "+enviro.get(key)); 
-        */
+        
 
         // show current directory
 		String workingDirectory = System.getProperty("user.dir") + "\\";
@@ -29,10 +29,10 @@ public class CreateProcess {
         //Open the process
         ProcessBuilder pb = new ProcessBuilder(command);  //step 1
 
-        /*get process environment 
+        //get process environment 
         Map<String, String> enviroP = pb.environment();
         enviroP.forEach((key,value)-> System.out.println(key+" "+value));
-        */
+        
 		Process proc = pb.start();	// step 2
 
         //If process have input and output --- handle it. 
