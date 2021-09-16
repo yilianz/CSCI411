@@ -30,30 +30,26 @@ public class threadApp {
             }
         };
 
-        Runnable task2 = ()->{
-            int sig = 1;
-            for (int i = 1000000; i < 2000000; i++) {
-                partialSum1[1] += 1.0 / (2.0 * i + 1) * sig;
-                sig = (-1) * sig;
-            }
-        };
+        // get another task     
 
 
         Thread worker1 = new Thread(task1);
-        Thread worker2 = new Thread(task2);
+        //Thread worker2 = new Thread(task2);
         starttime = System.nanoTime();
 
+        /* Start all threads */
+
         worker1.start();       //???? can we have array of threads 
-        worker2.start();  
-        /*----------*/
+         
+        /* Wait for all threads to be finished */
        
-        worker1.join();  // wait for it finish
+        worker1.join();  
         
 
-        /*After all finished */
+        /*After all finished Add the partial sum */
 
         endtime = System.nanoTime();
-        System.out.println("Execution time for four threads is " + (endtime - starttime) + " Answer is " + sum);
+        System.out.println("Execution time for four threads is " + (endtime - starttime) + " Answer is " + (4*partialSum1[0]));
     }
 
 }
