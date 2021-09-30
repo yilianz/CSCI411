@@ -13,9 +13,9 @@ public class Priority
 		System.out.println("Start multithreading");
 		
 	
-		// just for kicks, use a thread pool  0 - 9  + min priority 1  -- No IO
-		pool.execute(new Task(5));  // java priority is 10 ----- windows-Dynamic 6
-               // pool.execute(new Task(0));   // java priority is 2 
+		// just for kicks, use a thread pool  0 - 9  + min priority 1  -- No IO block
+		pool.execute(new Task(0));        // java priority  0+1 = 1
+      
 
 
 		//or get a runnable task directly 
@@ -33,7 +33,7 @@ public class Priority
 			System.out.println(" taskIO is done");
 		};
 	
-		pool.execute(taskwithIO);   // this is the thread with IO
+		//pool.execute(taskwithIO);   // this is the thread with IO
 
 		// sleep for 300 seconds
 		try { Thread.sleep(300000); } catch (InterruptedException ie) { }
