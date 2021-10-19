@@ -12,7 +12,7 @@ public class Semaphore
       this.value = value;
    }
 
-   public  synchronized void acquire() {
+   public synchronized void acquire() {
    	  // semaphore requires no busy waiting
       while (value <= 0) {
          try {

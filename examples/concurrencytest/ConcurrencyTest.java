@@ -9,7 +9,7 @@
 public class ConcurrencyTest
 {
    public static void main(String args[]) {
-   	  ClipboardText board = new ClipboardText();
+      ClipboardText board = new ClipboardText();
       Semaphore sem = new Semaphore(1);
 
       Thread[] bees = new Thread[5];

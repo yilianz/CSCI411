@@ -15,12 +15,15 @@ public class Sync
 		
 		System.out.println("Start multithreading");
 		
+		Object mutexlock = new Object();
 
 		//Task 1 --- increase count 
 		Runnable task1 = () -> {
 			Thread.currentThread().setPriority(num_priority1);
                         for(int i = 0; i< 100000; i++){
+			synchronized(mutexlock){
                             count++;
+                        }
                             //System.out.println("count in task 1 is "+count);
 			    if (Thread.currentThread().isInterrupted()) break;
 			}
@@ -30,7 +33,9 @@ public class Sync
 		Runnable task2 = () -> {
 			Thread.currentThread().setPriority(num_priority2);
                         for(int i = 0; i< 100000; i++){
+                          synchronized(mutexlock){
                             count--;
+}
 			    if (Thread.currentThread().isInterrupted()) break;
 			}
 		};
