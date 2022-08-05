@@ -14,9 +14,9 @@ layout: default
 
 
 ### Other reference books 
-**[Windows Internals 7th edition (Part 1) by Pavel Yosifovich, Alex Ionescu, Mark Russinovich and David Solomon](https://docs.microsoft.com/en-us/sysinternals/learn/windows-internals)**
+**[Windows Internals 7th edition (Part 1) by Pavel Yosifovich, Alex Ionescu, Mark Russinovich and David Solomon](https://docs.microsoft.com/en-us/sysinternals/resources/windows-internals)**
 
-**[Troubleshooting with the Windows Sysinternals Tools](https://docs.microsoft.com/en-us/sysinternals/learn/troubleshooting-book)**
+**[Troubleshooting with the Windows Sysinternals Tools](https://docs.microsoft.com/en-us/sysinternals/resources/troubleshooting-book)**
 
 **[Course Syllabus](https://yilianz.github.io/syllabus/CSCIA411syllabus.html)**
 ### Operating System snapshot
