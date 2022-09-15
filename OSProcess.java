@@ -20,18 +20,34 @@ public class OSProcess
 		System.out.println(workingDirectory);
 		*/	
 
-		/*  Create a command line window
+		// Create a command line window
 		System.out.print("bash>");
 
 		// Read the command ** A command without parameter **
+		ProcessBuilder pb;
+		Process proc;
 		Scanner console = new Scanner((System.in));
 		String command = console.nextLine();
-		*/
-		
-		ProcessBuilder pb = new ProcessBuilder("mspaint.exe");
-		Process proc = pb.start();	
+		String[] temp = command.split(" ");
+		if (temp.length==1) {
+			if(temp[0].equals("dir")||temp[0].equals("ls"))
+			{ 
+				pb = new ProcessBuilder("cmd","/c","dir");
+			}else{
+			 pb= new ProcessBuilder(command);
+			}
+			 proc = pb.start();	
+		}else{
+			System.out.println(temp[0]+" "+temp[1]);
 
-		 /* // obtain the input and output streams
+			pb = new ProcessBuilder(temp[0], temp[1]);
+			proc = pb.start();	
+		}
+		
+		
+		
+
+		// obtain the input and output streams
 		Scanner br = new Scanner(proc.getInputStream());
 		
 		while (br.hasNextLine()) {
@@ -39,7 +55,7 @@ public class OSProcess
             }
 
 		br.close();		
-			*/
+			
 
 		// end	
 			
