@@ -3,12 +3,13 @@ import java.util.*;
 
 public class anyRunnable implements Runnable{
 
-    public anyRunnable(){
-
+    int num =0;
+    public anyRunnable(int n){
+	num = n;
     }
 
     public void run(){
-        System.out.println("Any runnable is running");
+        System.out.println("Any runnable "+num+ " is running!");
         anyRunnableGoSleep();
     }
 

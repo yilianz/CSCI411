@@ -5,18 +5,21 @@ public class threadstack {
     public static void main(final String[] args) {
 
         // Create two threads where A is an instance of anyThread class
-        // B is an instance of anyRunnable
+        // B is a thread object that executable anyRunnable task
 
 
-
-	// Start the thread
-
+        // Start the thread
 
 
-        // wait for the two threads
+        // Create one thread C where C runs simpleRunnable task.
+        // and thread D where D continues printing random integers from 1-1000
+
+
+        // Main thread continues
         try {
             A.join();
-            B.join();
+            B.join();   
+            System.out.println(Thread.currentThread());
         } catch (InterruptedException e) {
         }
         System.out.print("All done");

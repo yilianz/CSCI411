@@ -1,15 +1,14 @@
+
 /**
  * @(#)simpleRunnable.java
+ *    --- Thread with File I/O
  *
- *
- * @author
- * @version 1.00 2011/2/3
  */
 
 import java.io.*;
 import java.util.*;
 
-public class simpleRunnable implements Runnable{
+public class simpleRunnable implements Runnable {
 	private final String message;
 
 	public simpleRunnable(final String s) {
@@ -27,27 +26,24 @@ public class simpleRunnable implements Runnable{
 				try {
 					Thread.sleep(2000 * sleeptime);
 				} catch (InterruptedException e) {
-					System.out.printf("Thread %s is interrupted \n",message);
+					System.out.printf("SimpleRunnable Thread %s is interrupted \n", message);
 					break;
 				}
 
-				// Catch interrupt
-
-				// if (Thread.currentThread().isInterrupted())
-				//	break;
+				// Catch interrupt. Check if current thread should be cancelled
 
 
 				// write to a file
 				outFile.println("Ashley");
-				System.out.println("Thread " + message + "   is running");
+				System.out.println("SimpleRunnable Thread " + message + "   is running");
 			}
 
 			// close file
-			System.out.println("Thread " + message + "   is done");
+			System.out.println("SimpleRunnable Thread " + message + "   is done");
 			outFile.close();
 
 		} catch (final IOException e) {
 		}
-    }
+	}
 
 }
