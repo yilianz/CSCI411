@@ -1,7 +1,7 @@
-public class Task implements Runnable {
+public class TaskNoIO implements Runnable {
 	public int prio;
 
-	public Task(int N) {
+	public TaskNoIO(int N) {
 		this.prio = N;
 	}
 
@@ -14,13 +14,12 @@ public class Task implements Runnable {
 		while (true) {
 
 			counter++;
-
 			/*
-			 * IO BLOCK
+			 * NO IO BLOCK   
+			 * if ((counter % 100000) == 0) {
+			 * System.out.format("Thread %d, tick = %d%n", name, counter);
+			 * }
 			 */
-			if ((counter % 100000) == 0) {
-				System.out.format("Thread priority %d, tick = %d%n", prio, counter);
-			}
 
 		}
 

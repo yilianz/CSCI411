@@ -13,18 +13,17 @@ public class Priority
 		System.out.println("Start multithreading");
 
 
-		// just for  kicks, use a thread pool
-		//	System.out.println("Thread " +i +"  starts");
-
-			pool.execute(new Task(0));
+		// just for  kicks, use a thread pool 
+		// pool.execute(new Task(4));
+		
 
 		// sleep for 10 seconds
 
 		try { Thread.sleep(1000000); } catch (InterruptedException ie) { }
-
+	
 		System.out.println("Main Thread  is done");
-		pool.shutdown();
 
+		pool.shutdown();
 
 	}
 }
