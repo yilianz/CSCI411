@@ -2,7 +2,7 @@ import java.util.concurrent.*;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class GameRoomSimulation{
+public class Sync{
 	private static int MAXIMUM_THREAD = 10;
 	private static int num_priority1 = 6;
 	private static int num_priority2 = 6;
