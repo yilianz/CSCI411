@@ -6,10 +6,17 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch threadstack",
+            "name": "threadstack",
             "request": "launch",
             "mainClass": "threadstack",
-            "projectName": "SimpleThread_aec624c"
+            "projectName": "SimpleThread_da85c350"
+        },
+        {
+            "type": "java",
+            "name": "threadstack",
+            "request": "launch",
+            "mainClass": "threadstack",
+            "projectName": "SimpleThread_bfc713ac"
         },
         {
             "type": "java",

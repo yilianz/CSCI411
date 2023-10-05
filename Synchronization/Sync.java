@@ -1,11 +1,9 @@
 import java.util.concurrent.*;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
-public class Sync{
+public class Sync {
 	private static int MAXIMUM_THREAD = 10;
-	private static int num_priority1 = 6;
-	private static int num_priority2 = 6;
+	private static int num_priority1 = 5;
+	private static int num_priority2 = 5;
 	private static int count = 0;
 
 	public static void main(String[] args) {
@@ -19,10 +17,8 @@ public class Sync{
 		Runnable task1 = () -> {
 			Thread.currentThread().setPriority(num_priority1);
 			for (int i = 0; i < 100000; i++) {
-
 				count++;
-
-				// System.out.println("count in task 1 is "+count);
+				//System.out.println("count in task 1 is "+count);
 				if (Thread.currentThread().isInterrupted())
 					break;
 			}
@@ -32,15 +28,12 @@ public class Sync{
 		Runnable task2 = () -> {
 			Thread.currentThread().setPriority(num_priority2);
 			for (int i = 0; i < 100000; i++) {
-
 				count--;
-
 				if (Thread.currentThread().isInterrupted())
 					break;
 			}
 		};
 
-		//Start the task with two threads
 		pool.execute(task1);
 		pool.execute(task2);
 
@@ -58,6 +51,21 @@ public class Sync{
 		} catch (InterruptedException e) {
 			pool.shutdownNow();
 		}
+
+
+		//  a test on clipboard --- sharing resource 
+		/* 
+		ClipboardText board = new ClipboardText();
+		for(int i=0; i<100000; i++){
+			board.setText("Hello" + i);
+			//thread sleep for 1ms
+			try{
+				Thread.sleep(1);
+			}catch(InterruptedException e){
+				e.printStackTrace();
+			}
+		}
+		*/
 
 	}
 }

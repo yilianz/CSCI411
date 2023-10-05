@@ -1,7 +1,7 @@
 /*****
  ** A test simple thread 
  ** create a new thread
- **  USCA 
+ **  USCA ACSC492F
  **
  */
 
@@ -32,7 +32,7 @@ public class simpleThreadClass extends Thread{
 					System.out.printf("Thread %d is interrupted",num);
 				} 
 			
-	    	System.out.println("Simple Thread " + num + "   is running");
+	    	System.out.println("Thread " + num + "   is running");
 		}
     }
 }
