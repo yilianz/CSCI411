@@ -10,10 +10,12 @@ layout: default
 
 
 ### Text Book 
-**[Operating System Concepts(10th Edition) by Silberschatz, Galvin, and Gagne](https://codex.cs.yale.edu/avi/os-book/OS10/index.html)**
+**[Modern Operating System by Andrew S. Tanenbaum 5th edition](https://www.pearson.com/en-us/subject-catalog/p/modern-operating-systems/P200000003295/9780137618880)**
 
 
 ### Other reference books 
+**[Operating Systems: Three Easy Pieces by Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau](https://pages.cs.wisc.edu/~remzi/OSTEP/).**
+
 **[Windows Internals 7th edition (Part 1) by Pavel Yosifovich, Alex Ionescu, Mark Russinovich and David Solomon](https://docs.microsoft.com/en-us/sysinternals/resources/windows-internals)**
 
 **[Troubleshooting with the Windows Sysinternals Tools](https://docs.microsoft.com/en-us/sysinternals/resources/troubleshooting-book)**
