@@ -1,4 +1,4 @@
-/* Create a external process in Java */
+/* Create a external process in Java -- process with input */
 import java.io.*;
 import java.util.*;
 
