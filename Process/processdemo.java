@@ -4,7 +4,11 @@ public class processdemo {
     public static void main(String[] args) {
         try {
             // Create a new process using the ProcessBuilder class
+<<<<<<< HEAD
             ProcessBuilder processBuilder = new ProcessBuilder("C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE");
+=======
+            ProcessBuilder processBuilder = new ProcessBuilder("mspaint.exe");
+>>>>>>> 36e8655bb27a4d1b6ebbcf9023c0551a410af00a
             
             // Start the process
             Process process = processBuilder.start();

@@ -1,4 +1,4 @@
-/* A simple code that demonstrate use if statement  */
+/* A simple code that demonstrate use if statement under multi-threading */
 
 import java.util.concurrent.*;
 import java.util.concurrent.locks.Lock;
@@ -20,17 +20,17 @@ public class GameRoomSimulation {
         Runnable player = () -> {
             while (true) {
                 // always want to join the room
-                // System.out.println("Player "+ Thread.currentThread().getId()+" wants to join the room");
+                //System.out.println("Player "+ Thread.currentThread().getId()+" wants to join, In Room - " + intheRoom + " player");
                 if (intheRoom < 1) {
                     // wait!!! can it works?
                     intheRoom++; // The number of player is 1
-                    // System.out.println("Player "+ Thread.currentThread().getId()+" is in the room");
+                    //System.out.println("Player "+ Thread.currentThread().getId()+" is in the room");
                     if (intheRoom > 1){
                         System.out.println("Whoops We have " + intheRoom + " player"); // can it ever happens?
                         break;
                     }
                     // nap for a while
-                    // SleepUtilities.nap();
+                    //SleepUtilities.nap();
                     // leave the room
                     intheRoom--;
                 }

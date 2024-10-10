@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "parallelcomputing",
+            "request": "launch",
+            "mainClass": "parallelcomputing",
+            "projectName": "SimpleThread_aec624c"
+        },
+        {
+            "type": "java",
+            "name": "threadstack1",
+            "request": "launch",
+            "mainClass": "threadstack1",
+            "projectName": "SimpleThread_aec624c"
+        },
+        {
+            "type": "java",
             "name": "threadstack",
             "request": "launch",
             "mainClass": "threadstack",

@@ -52,20 +52,5 @@ public class Sync {
 			pool.shutdownNow();
 		}
 
-
-		//  a test on clipboard --- sharing resource 
-		/* 
-		ClipboardText board = new ClipboardText();
-		for(int i=0; i<100000; i++){
-			board.setText("Hello" + i);
-			//thread sleep for 1ms
-			try{
-				Thread.sleep(1);
-			}catch(InterruptedException e){
-				e.printStackTrace();
-			}
-		}
-		*/
-
 	}
 }
